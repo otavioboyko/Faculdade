@@ -1,0 +1,9 @@
+body {
+   background-image: url('imagens/Fundo_de_creche.png');
+}
+
+.main {
+    background-color: green;
+    height: 400px;
+    width: 600px;
+}
