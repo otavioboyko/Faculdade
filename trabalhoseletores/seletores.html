@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        #id {
+            color: aquamarine;
+        }
+
+        .class {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .simples {
+            background-color: darkcyan;
+        }
+
+        div.container p.combinado {
+            font-style: oblique;
+        }
+
+        .joy-division p{
+            padding: 40px;
+        }
+        
+        .familha > p {
+            margin: 20px;
+        }
+
+        h2 + p {
+            color: green;
+        }
+
+        input[type="submit"] {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+        }
+
+        [class~="highlight"] {
+      background-color: yellow;
+      font-weight: bold;
+      padding: 5px;
+        }
+
+        a[href^="https"] {
+      color: green;
+      font-weight: bold;
+        }
+
+        img[src$=".png"] {
+      border: 2px solid red;
+        }
+
+        p[class*="note"] {
+      background-color: yellow;
+      padding: 10px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: green;
+        }
+
+        div.first-child p:first-child {
+            color: cyan;
+        }
+
+        .links a:link {
+            background-color: coral;
+        }
+
+        .links a:visited {
+            color: blanchedalmond;
+        }
+
+        .links a:hover {
+            color: firebrick;
+        }
+
+        .links a:active {
+            color: magenta;
+        }
+
+        .line::first-line {
+            background-color: mediumaquamarine;
+        }
+
+        .leter::first-letter {
+            color: fuchsia;
+        }
+
+        a.befter::after {
+            content: "»";
+	        color: blue;
+        }
+
+        a.befter::before {
+            content: "«";
+	        color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seletores</h1>
+    <p>Ola, nesse site você vera os seletores CSS</p>
+    <p>Use a lista de navegação abaixo para pular para o seletor desejado</p>
+    <hr>
+    <p id="id">O seletor id, requer o uso do # (jogo da velha ou hashtag) + nome do id, e é usado para localizar um elemento no CSS e JavaScript, so pode ser usado uma vez em uma pagina, pois foi criado para identificar um elemento exclusivo na pagina, e se usado fora disso, pode causar problemas em seu CSS ou JavaScript, apenas o primeiro id sera selecionado</p>
+    <hr>
+    <p class="class">O seletor class, requer o uso de . (ponto) + nome da class, e tem a mesma função e funcionalidade de um id, porem, podem ser usados mais de uma vez</p>
+    <hr>
+    <p>O seletor por tag, ocorre quando você adiciona uma tag sozinha no CSS</p>
+    <hr>
+    <p>O seletor universal, e usado para selecionar TODO o conteudo de uma pagina, utiliza-se o simbolo * (asterisco)</p>
+    <hr>
+    <p class="simples">Seletores simples, são seletores normais</p>
+    <div class="container">
+        <p>Um seletor combinado é usado para selecionar elementos com base em múltiplos critérios. Por exemplo, você pode selecionar elementos que tenham uma determinada classe e estejam dentro de um certo elemento pai ou que tenham uma determinada estrutura hierárquica, existem diversos seletores combinados, como os abaixo.</p>
+        <p class="combinado">Aqui esta um exemplo</p>
+    </div>
+    <hr>
+    <div class="joy-division">
+        <p>Um seletor descendente é usado para selecionar um elemento que é descendente de outro elemento específico, para usalo, utiliza-se "seletor espaço seletor".</p>
+    </div>
+    <hr>
+    <div class="familha">
+        <p>Um seletor filho, e usado para selecionar os filhos diretos do elemento em específico, para utiliza-lo, utilaza "seletor + > + seletor"</p>
+        <span>
+            <p>filho 2</p>
+            <p>filho 3</p>
+            <p>filho 4</p>
+        </span>
+    </div>
+    <hr>
+    <h2>Irmão adjacente</h2>
+    <p>seletor de irmão adjacente em CSS é usado para selecionar um elemento que é imediatamente precedido por outro elemento específico, para utilizalo, utiliza "seletor + + + seletor"<p>
+    <p>Esse daqui não e um irmão</p>
+    <hr>
+    <h2>Um seletores att ou attr, permitem aplicar estilos a elementos HTML com base nos valores de seus atributos.</h2>
+    <hr>
+    <p>Um seletor de atributo [att=val],  aplica estilos a elementos HTML que possuem um atributo específico com um valor exato</p>
+    <p>eExemplo:</p>
+    <form action="/submit">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <p>O CSS acima só foi aplicado no submit</p>
+    <hr>
+    <p>[attr~=val] seleciona elementos cujo valor de atributo contém uma palavra específica, onde as palavras são separadas por espaços.</p>
+    <p class="highlight">Este parágrafo será destacado.</p>
+    <p class="highlight important">Este parágrafo também será destacado e é importante.</p>
+    <p class="note">Este parágrafo não será destacado.</p>
+    <hr>
+    <p>E[foo^="bar"] - Elementos E cujo valor do atributo "foo" começa exatamente com a string "bar";</p>
+    <a href="https://example.com">Link Seguro</a>
+    <a href="http://example.com">Link Não Seguro</a>
+    <hr>
+    <p>E[foo$="bar"] - Elementos E cujo valor do atributo "foo" termina exatamente com a string"bar"</p>
+    <img src="pngtree-tree-plant-forest-png-image_11544870.png" alt="Imagem PNG">
+    <img src="transferir (3).jpg" alt="Imagem JPG">
+    <hr>
+    <p>E[foo*="bar"] - Elementos E cujo valor do atributo "foo" contém a substring "bar"</p>
+    <p class="important-note">Este parágrafo contém "note".</p>
+    <p class="note-highlight">Este parágrafo também contém "note".</p>
+    <p class="message">Este parágrafo não será afetado.</p>
+    <hr>
+    <h2>Agrupamento de seletores, e quando varios seletores são agrupados e separados em virgula para dar estilo</h2>
+    <h1>titulo</h1>
+    <h2>titulo</h2>
+    <h3>titulo</h3>
+    <h4>titulo</h4>
+    <h5>titulo</h5>
+    <h6>titulo</h6>
+    <hr>
+    <h2>pseudo-classes</h2>
+    <p>casam elementos baseadas em outras características que não são: seu nome, seus atributos ou seu conteúdo. Para ativalos, usa-se : ou ::.</p>
+    <hr>
+    <div class="first-child">    
+        <p>A pseudo-classe :first-child, casa com o elemento que é o primeiro filho de um outro elemento.  </p>
+    </div>
+    <hr>
+    <div class="links">
+        <p>:link e :visited, afetam o estado dos links visitados e não visitados.</p>
+        <p>:hover, afeta quando o mouse passa por cima do elemento mas não clica</p>
+        <p>:active, e aplicado clica em algo e permanece clicado</p>
+        <a href="#">Clique em mim.</a>
+    </div>
+    <hr>
+    <p>::first-line, afeta a primeira linha de um texto</p>
+    <p class="line">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut maxime omnis minus, beatae dolorem reiciendis, odio possimus perferendis fugit repudiandae quos delectus suscipit harum sequi facere quaerat quidem eum dolores?</p>
+    <hr>
+    <p class="leter">::first-leter, seleciona a primeira letra ou caracter de um elemento</p>
+    <hr>
+    <p>::before e ::after - utilizados para criar conteúdo antes ou depois dos elementos selecionados.</p>
+    <a href="#" class="befter">before e after</a>
+</body>
+</html>
