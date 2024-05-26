@@ -10,6 +10,29 @@
             margin: 0;
         }
 
+        body {
+      font-family: Arial, sans-serif;
+        }
+
+    nav {
+      margin-bottom: 20px;
+        }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: blue;
+        }
+
+    section {
+      margin-top: 50px;
+        }
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
         p {
             font-size: 30px;
         }
@@ -112,31 +135,68 @@
             content: "«";
 	        color: red;
         }
+
+        .important-text {
+            color: blue;
+        }
+
+        p#special {
+            color: green;
+        }
+
+        .override {
+            color: red !important;
+        }
     </style>
 </head>
 <body>
     <h1>Seletores</h1>
     <p>Ola, nesse site você vera os seletores CSS</p>
     <p>Use a lista de navegação abaixo para pular para o seletor desejado</p>
+    <nav>
+        <a href="#id">ID</a>
+        <a href="#class">Class</a>
+        <a href="#sozinho">Sozinho</a>
+        <a href="#universal">Universal</a>
+        <a href="#combinado">Combinado</a>
+        <a href="#descendente">Descendente</a>
+        <a href="#familha">Familha</a>
+        <a href="#irmao">Irmão</a>
+        <a href="#att">Atributos</a>
+        <a href="#efoo">Efoo</a>
+        <a href="#agrupamento">Agrupamento</a>
+        <a href="#pseudo-classes">Pseudo classes</a>
+        <a href="#cascata">Efeito Cascata</a>
+      </nav>
     <hr>
     <p id="id">O seletor id, requer o uso do # (jogo da velha ou hashtag) + nome do id, e é usado para localizar um elemento no CSS e JavaScript, so pode ser usado uma vez em uma pagina, pois foi criado para identificar um elemento exclusivo na pagina, e se usado fora disso, pode causar problemas em seu CSS ou JavaScript, apenas o primeiro id sera selecionado</p>
     <hr>
+    <section id="class">
     <p class="class">O seletor class, requer o uso de . (ponto) + nome da class, e tem a mesma função e funcionalidade de um id, porem, podem ser usados mais de uma vez</p>
+    </section>
     <hr>
+    <section id="sozinho">
     <p>O seletor por tag, ocorre quando você adiciona uma tag sozinha no CSS</p>
+    </section>
     <hr>
+    <section id="universal">
     <p>O seletor universal, e usado para selecionar TODO o conteudo de uma pagina, utiliza-se o simbolo * (asterisco)</p>
+    </section>
     <hr>
-    <p class="simples">Seletores simples, são seletores normais</p>
+    <section id="combinado">
     <div class="container">
         <p>Um seletor combinado é usado para selecionar elementos com base em múltiplos critérios. Por exemplo, você pode selecionar elementos que tenham uma determinada classe e estejam dentro de um certo elemento pai ou que tenham uma determinada estrutura hierárquica, existem diversos seletores combinados, como os abaixo.</p>
         <p class="combinado">Aqui esta um exemplo</p>
     </div>
+    </section>
     <hr>
+    <section id="descendente">
     <div class="joy-division">
         <p>Um seletor descendente é usado para selecionar um elemento que é descendente de outro elemento específico, para usalo, utiliza-se "seletor espaço seletor".</p>
     </div>
+    </section>
     <hr>
+    <section id="familha">
     <div class="familha">
         <p>Um seletor filho, e usado para selecionar os filhos diretos do elemento em específico, para utiliza-lo, utilaza "seletor + > + seletor"</p>
         <span>
@@ -145,11 +205,15 @@
             <p>filho 4</p>
         </span>
     </div>
+    </section>
     <hr>
+    <section id="irmao">
     <h2>Irmão adjacente</h2>
     <p>seletor de irmão adjacente em CSS é usado para selecionar um elemento que é imediatamente precedido por outro elemento específico, para utilizalo, utiliza "seletor + + + seletor"<p>
     <p>Esse daqui não e um irmão</p>
+    </section>
     <hr>
+    <section id="att">
     <h2>Um seletores att ou attr, permitem aplicar estilos a elementos HTML com base nos valores de seus atributos.</h2>
     <hr>
     <p>Um seletor de atributo [att=val],  aplica estilos a elementos HTML que possuem um atributo específico com um valor exato</p>
@@ -165,7 +229,9 @@
     <p class="highlight">Este parágrafo será destacado.</p>
     <p class="highlight important">Este parágrafo também será destacado e é importante.</p>
     <p class="note">Este parágrafo não será destacado.</p>
+    </section>
     <hr>
+    <section id="efoo">
     <p>E[foo^="bar"] - Elementos E cujo valor do atributo "foo" começa exatamente com a string "bar";</p>
     <a href="https://example.com">Link Seguro</a>
     <a href="http://example.com">Link Não Seguro</a>
@@ -178,7 +244,9 @@
     <p class="important-note">Este parágrafo contém "note".</p>
     <p class="note-highlight">Este parágrafo também contém "note".</p>
     <p class="message">Este parágrafo não será afetado.</p>
+    </section>
     <hr>
+    <section id="agrupamento">
     <h2>Agrupamento de seletores, e quando varios seletores são agrupados e separados em virgula para dar estilo</h2>
     <h1>titulo</h1>
     <h2>titulo</h2>
@@ -186,7 +254,9 @@
     <h4>titulo</h4>
     <h5>titulo</h5>
     <h6>titulo</h6>
+    </section>
     <hr>
+    <section id="pseudo-classes">
     <h2>pseudo-classes</h2>
     <p>casam elementos baseadas em outras características que não são: seu nome, seus atributos ou seu conteúdo. Para ativalos, usa-se : ou ::.</p>
     <hr>
@@ -208,5 +278,14 @@
     <hr>
     <p>::before e ::after - utilizados para criar conteúdo antes ou depois dos elementos selecionados.</p>
     <a href="#" class="befter">before e after</a>
+    </section>
+    <hr>
+    <section id="cascata">
+        <h2>Exemplo de Efeito Cascata e !important</h2>
+        <p>Este parágrafo tem estilos globais aplicados (cor preta e tamanho de fonte 16px).</p>
+        <p class="important-text">Este parágrafo tem uma classe que aplica uma cor azul, que é mais específica que o estilo global.</p>
+        <p id="special">Este parágrafo tem um estilo inline que aplica uma cor verde, sobrepondo a classe.</p>
+        <p class="important-text override">Este parágrafo tem duas classes, uma aplicando cor azul e outra aplicando cor vermelha com !important. A cor vermelha prevalece devido ao !important.</p>
+    </section>
 </body>
 </html>
