@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/Danleech-Simple-Linkedin.24.png" type="image/x-icon">
     <title>Perfil LinkedIn</title>
     <style>
         body {
             background-color: #F4F2EE;
             padding: 0px;
             margin: 0px;
-            font-family: ;
+        }
+
+        .amarelo {
+            color: yellow;
         }
 
         nav {
@@ -26,6 +30,7 @@
 
         nav li {
             margin-right: 20px;
+            color: black;
         }
 
         nav form {
@@ -33,21 +38,75 @@
         }
 
         .dados-pessoais {
+            border-radius: 1%;
             background-color: white;
             width: 830px;
             margin-top: 25px;
             margin-left: 85px;
-            border-radius: 2%;
+            height: 380px;
         }
 
-        .redondo {
+        .redondo{
             border-radius: 50%;
             width: 200px;
             height: 200px;
         }
 
-        .lula {
+        .botoes {
+            list-style-type: none;
+            display: flex;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
 
+        .azul {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0A66C2;
+            color: #FFF;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px; 
+        }
+
+        .direita {
+            position: relative;
+            display: block;
+        }
+
+       .vaipfv {
+            position: absolute;
+            top: 280px;
+            right: 0;
+            width: 600px;
+            position: absolute;
+            right: 0;
+            height: auto;
+        }
+
+        .sobre {
+            border-radius: 1%;
+            background-color: white;
+            width: 830px;
+            margin-top: 25px;
+            margin-left: 85px;
+        }
+
+        .experiencias-profissionais {
+            border-radius: 1%;
+            background-color: white;
+            width: 830px;
+            margin-top: 25px;
+            margin-left: 85px;
+        }
+
+        .experiencias-academicas {
+            border-radius: 1%;
+            background-color: white;
+            width: 830px;
+            margin-top: 25px;
+            margin-left: 85px;
         }
     </style>
 </head>
@@ -56,41 +115,42 @@
         <nav>
             <ul>
                 <li>
+                    <img src="Imagens/Danleech-Simple-Linkedin.32.png" alt="">
                 <form action="/search" method="get">
                     <input type="search" name="query" placeholder="Pesquisar...">
                 </form>
                 </li>
-                <li>Inicio</li>
-                <li>Minha Rede</li>
-                <li>Vagas</li>
-                <li>Menssagens</li>
-                <li>Notificações</li>
-                <li>Eu</li>
-                <li>Para Negocios</li>
-                <li><a href="#">Experimente premium por BRL0</a></li>
+                <li><a href="#"><img src="Imagens/casa.png" alt="">Inicio</a></li>
+                <li><a href="#"><img src="Imagens/pessoas.png" alt="">Minha Rede</a></li>
+                <li><a href="#"><img src="Imagens/maleta.png" alt="">Vaga</a>s</li>
+                <li><a href="#"><img src="Imagens/falar.png" alt="">Menssagens</a></li>
+                <li><a href="#"><img src="Imagens/sino.png" alt="">Notificações</a></li>
+                <li><a href="#"><img src="Imagens/eu.png" alt="">Eu</a></li>
+                <li><a href="#"><img src="Imagens/menu.png" alt="">Para Negocios</a></li>
+                <li><a href="#" class="amarelo">Experimente premium por BRL0</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="dados-pessoais">
         <img src="Imagens/IMG_20240522_111315_108-_1_.jpg" alt="#" class="redondo">
-        <p class="lula">Nome: Otávio Marinovski Boyko</p>
+        <p class="">Nome: Otávio Marinovski Boyko</p>
         <p>Estudante desempregado</p>
         <p><sub>Umurama, Paraná, Brasil</sub></p>
-        <ul>
-            <li><button><a href="#">Conectar</a></button></li>
-            <li><button><a href="#">Enviar mensagem</a></button></li>
-            <li><button><a href="#">Mais</a></button></li>
+        <ul class="botoes">
+            <li><button class="azul"><a href="#">Conectar</a></button></li>
+            <li><button class="branco"><a href="#">Enviar mensagem</a></button></li>
+            <li><button class="cinza"><a href="#">Mais</a></button></li>
         </ul>
-        <p><img src="Imagens/uniparbr_logo.jpeg" alt="logo da Unipar">Unipar</p>
+        <p class="vaipfv"><img src="Imagens/uniparbr_logo.jpeg" alt="logo da Unipar" class="direita">Unipar</p>
     </section>
 
-    <section id="sobre">
+    <section class="sobre">
         <h2>Sobre</h2>
         <p>Estudante desempragado da Unipar</p>
     </section>
 
-    <section id="experiencias-profissionais">
+    <section class="experiencias-profissionais">
         <h2>Experiências Profissionais</h2>
         <div>
             <img src="Imagens/uniparbr_logo.jpeg" alt="logo da Unipar">
@@ -108,7 +168,7 @@
         </div>
     </section>
 
-    <section id="experiencias-academicas">
+    <section class="experiencias-academicas">
         <h2>Experiências Acadêmicas</h2>
         <div>
             <img src="Imagens/uniparbr_logo.jpeg" alt="logo da Unipar">
