@@ -6,10 +6,16 @@
     <link rel="shortcut icon" href="Imagens/Danleech-Simple-Linkedin.24.png" type="image/x-icon">
     <title>Perfil LinkedIn</title>
     <style>
+
         body {
             background-color: #F4F2EE;
             padding: 0px;
             margin: 0px;
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         .amarelo {
@@ -17,20 +23,29 @@
         }
 
         nav {
-            box-shadow: 5px black;
+           box-shadow: 0.50px 1px rgba(0, 0, 0, 0.150);
+            flex-direction: column;
+            align-items: center;
         }
 
         nav ul {
             background-color: white;
             list-style-type: none;
-            padding: 15px;
+            padding: 10px;
             margin: 0;
             display: flex;
+            flex-direction: row;
+            align-items: center;
         }
 
         nav li {
             margin-right: 20px;
             color: black;
+            display: flex;
+        }
+
+        .search {
+            margin-left: 20px;
         }
 
         nav form {
@@ -42,14 +57,31 @@
             background-color: white;
             width: 830px;
             margin-top: 25px;
-            margin-left: 85px;
-            height: 380px;
+            margin-left: 80px;
+            height: 340px;
+            line-height: 0.5;
+            box-shadow: 0.50px 1px rgba(0, 0, 0, 0.150);
+        }
+
+        .grande {
+            font-size: 30px;
+            margin-left: 15px;
+        }
+
+        .medio {
+            margin: 15px;
+        }
+
+        .pequeno {
+            font-size: 14px;
+            color: #666666;
+            margin-left: 15px;
         }
 
         .redondo{
             border-radius: 50%;
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
         }
 
         .botoes {
@@ -58,14 +90,36 @@
             display: flex;
             flex-direction: row;
             gap: 20px;
+            font-size: 20px;
+            margin-bottom: 50px;
         }
 
         .azul {
             padding: 10px 20px;
             font-size: 16px;
             background-color: #0A66C2;
-            color: #FFF;
+            color: white;
             border: none;
+            cursor: pointer;
+            border-radius: 50px; 
+        }
+
+        .branco {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: white;
+            color: blue;
+            border: 2px blue solid;
+            cursor: pointer;
+            border-radius: 50px; 
+        }
+
+        .cinza {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: white;
+            color: gray;
+            border: 2px gray solid;
             cursor: pointer;
             border-radius: 50px; 
         }
@@ -77,7 +131,7 @@
 
        .vaipfv {
             position: absolute;
-            top: 280px;
+            top: 240px;
             right: 0;
             width: 600px;
             position: absolute;
@@ -88,9 +142,11 @@
         .sobre {
             border-radius: 1%;
             background-color: white;
-            width: 830px;
-            margin-top: 25px;
+            width: 800px;
+            margin-top: 20px;
             margin-left: 85px;
+            padding: 10px;
+            box-shadow: 0.50px 1px rgba(0, 0, 0, 0.150);
         }
 
         .experiencias-profissionais {
@@ -99,6 +155,8 @@
             width: 830px;
             margin-top: 25px;
             margin-left: 85px;
+            padding: 10px;
+            box-shadow: 0.50px 1px rgba(0, 0, 0, 0.150);
         }
 
         .experiencias-academicas {
@@ -107,6 +165,16 @@
             width: 830px;
             margin-top: 25px;
             margin-left: 85px;
+            padding: 10px;
+            box-shadow: 0.50px 1px rgba(0, 0, 0, 0.150);
+        }
+
+        .kkkk {
+            margin-left: 40px;
+        }
+
+        .doido {
+            margin-top: auto;
         }
     </style>
 </head>
@@ -116,13 +184,13 @@
             <ul>
                 <li>
                     <img src="Imagens/Danleech-Simple-Linkedin.32.png" alt="">
-                <form action="/search" method="get">
+                <form action="/search" method="get" class="search">
                     <input type="search" name="query" placeholder="Pesquisar...">
                 </form>
                 </li>
                 <li><a href="#"><img src="Imagens/casa.png" alt="">Inicio</a></li>
                 <li><a href="#"><img src="Imagens/pessoas.png" alt="">Minha Rede</a></li>
-                <li><a href="#"><img src="Imagens/maleta.png" alt="">Vaga</a>s</li>
+                <li><a href="#"><img src="Imagens/maleta.png" alt="">Vagas</a></li>
                 <li><a href="#"><img src="Imagens/falar.png" alt="">Menssagens</a></li>
                 <li><a href="#"><img src="Imagens/sino.png" alt="">Notificações</a></li>
                 <li><a href="#"><img src="Imagens/eu.png" alt="">Eu</a></li>
@@ -133,27 +201,27 @@
     </header>
 
     <section class="dados-pessoais">
-        <img src="Imagens/IMG_20240522_111315_108-_1_.jpg" alt="#" class="redondo">
-        <p class="">Nome: Otávio Marinovski Boyko</p>
-        <p>Estudante desempregado</p>
-        <p><sub>Umurama, Paraná, Brasil</sub></p>
+        <img src="Imagens/Foto-3x4 (1).jpg" alt="#" class="redondo">
+        <p class="grande">Nome: Otávio Marinovski Boyko</p>
+        <p class="medio">Estudante desempregado - <a href="]"></a></p>
+        <p class="pequeno">Umurama, Paraná, Brasil</p>
         <ul class="botoes">
-            <li><button class="azul"><a href="#">Conectar</a></button></li>
-            <li><button class="branco"><a href="#">Enviar mensagem</a></button></li>
+            <li><button class="azul"><img src="Imagens/conversar.png" alt=""><a href="#">Conectar</a></button></li>
+            <li><button class="branco"><img src="Imagens/plane.png" alt=""><a href="#">Enviar mensagem</a></button></li>
             <li><button class="cinza"><a href="#">Mais</a></button></li>
         </ul>
-        <p class="vaipfv"><img src="Imagens/uniparbr_logo.jpeg" alt="logo da Unipar" class="direita">Unipar</p>
+        <p class="vaipfv"><img src="Imagens/Unipar-pequeno.jpg" alt="logo da Unipar" class="direita">Unipar</p>
     </section>
 
     <section class="sobre">
-        <h2>Sobre</h2>
-        <p>Estudante desempragado da Unipar</p>
+        <h2 class="medio">Sobre</h2>
+        <p class="medio">Estudante desempragado da Unipar</p>
     </section>
 
     <section class="experiencias-profissionais">
-        <h2>Experiências Profissionais</h2>
-        <div>
-            <img src="Imagens/uniparbr_logo.jpeg" alt="logo da Unipar">
+        <h2 class="kkkk">Experiências Profissionais</h2>
+        <div class="kkkk">
+            <img src="Imagens/Unipar-pequeno.jpg" alt="logo da Unipar" class="doido">
             <h3>Unipar - Universidade paranaense</h3>
             <p><sub>mar de 2018 - o momento · 6 anos 4 meses</sub></p>
             <p><sub>Umuarama e Região, Brasil</sub></p>
@@ -169,9 +237,9 @@
     </section>
 
     <section class="experiencias-academicas">
-        <h2>Experiências Acadêmicas</h2>
-        <div>
-            <img src="Imagens/uniparbr_logo.jpeg" alt="logo da Unipar">
+        <h2 class="kkkk">Experiências Acadêmicas</h2>
+        <div class="kkkk">
+            <img src="Imagens/Unipar-pequeno.jpg" alt="logo da Unipar" class="doido">
             <h3>Unipar - Universidade Paranaense</h3>
             <p>Bacharelado em sistemas da informação</p>
             <p><sub>2024 - Em andamento</sub></p>
