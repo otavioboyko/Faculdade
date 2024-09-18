@@ -20,33 +20,42 @@
 </head>
 <body>
    <button class="atv3" onclick="handleButton1Click()">Executar atividade 3 (console)</button> 
-   <button class="atv4">Executar atividade 4 (console)</button>
+   <button class="atv4" onclick="handleButton2Click()">Executar atividade 4 (console)</button>
 
    <script>
 
     function handleButton1Click() {
     for (let num=1; num <= 100; num++) {
-        console.log(num);
         if (num % 15 === 0) {
             console.log("FizzBuzz");
         } else if (num % 3 === 0) {
             console.log("Fizz");
         } else if (num % 5 === 0) {
             console.log("Buzz");
+        } else {
+            console.log(num)
         }
     }
     }
-
-     /* function printGrid(size) {
-    for (let row = 0; row < size; row++) {
-        let line = ''; 
-        for (let col = 0; col < size; col++) {
-            line += 'O ';
+    
+    function handleButton2Click() {
+    function printGrid(size) {
+        let grid = '';
+        for (let row = 0; row < size; row++) {
+            let line = '';
+            for (let col = 0; col < size; col++) {
+                if ((row + col) % 2 === 0) {
+                    line += '..';
+                } else {
+                    line += '#';
+                }
+            }
+            grid += line + '\n';
         }
-        console.log(line);
+        console.log(grid);
     }
-    }
-    printGrid(8); */
+    printGrid(8);
+}
    </script>
 </body>
 </html>
