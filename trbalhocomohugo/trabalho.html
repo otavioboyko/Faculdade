@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+    <style>
+        .atv3 {
+            background-color: purple;
+            border-radius: 25px;
+            font-size: 15px;
+        }
+
+        .atv4 {
+            background-color: green;
+            border-radius: 25px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+   <button class="atv3" onclick="handleButton1Click()">Executar atividade 3 (console)</button> 
+   <button class="atv4">Executar atividade 4 (console)</button>
+
+   <script>
+
+    function handleButton1Click() {
+    for (let num=1; num <= 100; num++) {
+        console.log(num);
+        if (num % 15 === 0) {
+            console.log("FizzBuzz");
+        } else if (num % 3 === 0) {
+            console.log("Fizz");
+        } else if (num % 5 === 0) {
+            console.log("Buzz");
+        }
+    }
+    }
+
+     /* function printGrid(size) {
+    for (let row = 0; row < size; row++) {
+        let line = ''; 
+        for (let col = 0; col < size; col++) {
+            line += 'O ';
+        }
+        console.log(line);
+    }
+    }
+    printGrid(8); */
+   </script>
+</body>
+</html>
