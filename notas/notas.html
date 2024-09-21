@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média</title>
+</head>
+<body>
+    <h1>Cálculo da Média</h1>
+    <form id="mediaForm">
+        <p>Nome</p>
+        <input type="text" id="nome" placeholder="Nome" required />
+        <p>Sobrenome</p>
+        <input type="text" id="sobrenome" placeholder="Sobrenome" required />
+        
+        <p>Nota do primeiro bimestre</p>
+        <input type="number" id="nota1" step="any" placeholder="Digite um número" min="0" max="10" required/>
+        
+        <p>Nota do segundo bimestre</p>
+        <input type="number" id="nota2" step="any" placeholder="Digite um número" min="0" max="10" required />
+        
+        <p>Nota do terceiro bimestre</p>
+        <input type="number" id="nota3" step="any" placeholder="Digite um número" min="0" max="10" required />
+        
+        <p>Nota do quarto bimestre</p>
+        <input type="number" id="nota4" step="any" placeholder="Digite um número" min="0" max="10" required />
+        
+        <button type="button" id="calcular">Calcular Média</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('calcular').addEventListener('click', function() {
+            const nome = document.getElementById('nome').value;
+            const sobrenome = document.getElementById('sobrenome').value;
+            const notas = [
+                parseFloat(document.getElementById('nota1').value) || 0,
+                parseFloat(document.getElementById('nota2').value) || 0,
+                parseFloat(document.getElementById('nota3').value) || 0,
+                parseFloat(document.getElementById('nota4').value) || 0,
+            ];
+
+            const media = notas.reduce((acc, val) => acc + val, 0) / notas.length;
+
+            let resultadoMensagem;
+            if (media < 4) {
+                resultadoMensagem = 'Reprovado.';
+            } else if (media < 6) {
+                resultadoMensagem = 'Ficou de final.';
+            } else {
+                resultadoMensagem = 'Aprovado.';
+            }
+            document.getElementById('resultado').innerText = 
+                `${nome} ${sobrenome}, a média é: ${media.toFixed(2)}. ${resultadoMensagem}`;
+        });
+    </script>
+</body>
+</html>
