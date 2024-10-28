@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Natal</title>
+</head>
+<body>
+    <h1>Gerar Pirâmide e Árvore</h1>
+    
+    <input type="number" id="numero" placeholder="Digite um número" min="1">
+    
+    <button onclick="exibirPiramide()">Exibir pirâmide na Tela</button>
+    <button onclick="gerarPiramide()">Gerar pirâmide no Console</button>
+    
+    <pre id="resultado"></pre>
+
+    <button onclick="gerarArvoreConsole()">Gerar no console Árvore</button>
+    <button onclick="gerarArvoreHTML()">Gerar árvore no HTML</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        function exibirPiramide() {
+            const n = document.getElementById('numero').value;
+            let resultado = '';
+
+            for (let i = 1; i <= n; i++) {
+                resultado += ' '.repeat(n - i) + '#'.repeat(i) + '\n';
+            }
+
+            document.getElementById('resultado').textContent = resultado;
+        }
+
+        function gerarPiramide() {
+            const n = document.getElementById('numero').value;
+            let resultado = '';
+
+            for (let i = 1; i <= n; i++) {
+                resultado += ' '.repeat(n - i) + '#'.repeat(i) + '\n';
+            }
+
+            console.log(resultado);
+        }
+
+        function gerarArvoreConsole() {
+            const altura = parseInt(document.getElementById("numero").value, 10);
+            const cauleAltura = Math.floor(altura / 2);
+            let resultado = '';
+
+            for (let i = 1; i <= altura; i++) {
+                let espaços = ' '.repeat(altura - i);
+                let hashes = '#'.repeat(2 * i);
+                resultado += `${espaços}${hashes}\n`;
+            }
+
+            for (let i = 0; i < cauleAltura; i++) {
+                resultado += ' '.repeat(altura - 1) + '##\n';
+            }
+
+            console.log(resultado);
+        }
+
+        function gerarArvoreHTML() {
+            const altura = parseInt(document.getElementById("numero").value, 10);
+            const cauleAltura = Math.floor(altura / 2);
+            let resultado = '';
+
+            for (let i = 1; i <= altura; i++) {
+                let espaços = ' '.repeat(altura - i);
+                let hashes = '#'.repeat(2 * i);
+                resultado += `${espaços}${hashes}\n`;
+            }
+
+            for (let i = 0; i < cauleAltura; i++) {
+                resultado += ' '.repeat(altura - 1) + '##\n';
+            }
+
+            document.getElementById("output").textContent = resultado;
+        }
+    </script>
+</body>
+</html>
