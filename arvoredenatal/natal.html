@@ -21,6 +21,8 @@
     <pre id="output"></pre>
 
     <script>
+
+        //Hugo Dias
         function exibirPiramide() {
             const n = document.getElementById('numero').value;
             let resultado = '';
@@ -43,11 +45,13 @@
             console.log(resultado);
         }
 
+                //Otávio Boyko
         function gerarArvoreConsole() {
             const altura = parseInt(document.getElementById("numero").value, 10);
             const cauleAltura = Math.floor(altura / 2);
             let resultado = '';
 
+            resultado += ' '.repeat(altura - 1) + '☆\n';
             for (let i = 1; i <= altura; i++) {
                 let espaços = ' '.repeat(altura - i);
                 let hashes = '#'.repeat(2 * i);
@@ -57,6 +61,9 @@
             for (let i = 0; i < cauleAltura; i++) {
                 resultado += ' '.repeat(altura - 1) + '##\n';
             }
+
+            let linhaUnderLine = '_'.repeat(2 * altura + 2);
+            resultado += linhaUnderLine + '\n' + '\n';
 
             console.log(resultado);
         }
@@ -66,6 +73,7 @@
             const cauleAltura = Math.floor(altura / 2);
             let resultado = '';
 
+            resultado += ' '.repeat(altura - 1) + '☆\n';
             for (let i = 1; i <= altura; i++) {
                 let espaços = ' '.repeat(altura - i);
                 let hashes = '#'.repeat(2 * i);
@@ -75,6 +83,10 @@
             for (let i = 0; i < cauleAltura; i++) {
                 resultado += ' '.repeat(altura - 1) + '##\n';
             }
+
+
+            let linhaUnderLine = '_'.repeat(2 * altura + 2);
+            resultado += linhaUnderLine + '\n';
 
             document.getElementById("output").textContent = resultado;
         }
