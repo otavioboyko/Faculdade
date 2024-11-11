@@ -46,7 +46,15 @@ button {
     padding: 25px;
 }
 
+.emme {
+    background-color: blue;
+    border-radius: 40%;
+    width: 60px;
+}
+
 .apagar {
     background-color: red;
     color: white;
+    border-radius: 40%;
+    width: 60px;
 }

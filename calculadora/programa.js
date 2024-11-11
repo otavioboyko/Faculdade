@@ -1,13 +1,30 @@
-const display = document.getElementsByClassName("display");
+const display = document.querySelector(".display");
 
-function calcular(input) {
-    display.value += input
-}
+        function calcular(input) {
+            display.value += input;
+        }
 
-function apagar() {
+        function apagar() {
+            display.value = '';
+        }
 
-}
+        function igual() {
+            let displayValue = display.value;
+            try {
+                if (displayValue.includes('%')) {
+                    let [num, percent] = displayValue.split('%');
+                    num = parseFloat(num.trim());
+                    percent = parseFloat(percent.trim());
 
-function igual() {
-
-}
+                    if (!isNaN(num) && !isNaN(percent)) {
+                        display.value = (num * percent) / 100;
+                    } else {
+                        display.value = 'Erro';
+                    }
+                } else {
+                    display.value = eval(displayValue);
+                }
+            } catch (e) {
+                display.value = 'Erro';
+            }
+        }
